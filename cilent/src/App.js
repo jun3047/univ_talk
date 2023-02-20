@@ -1,8 +1,9 @@
+import Login from './page/login.js'
+
+
 function App() {
   return (
-    <div className="App">
-      하이
-    </div>
+    <Login></Login>
   );
 }
 
