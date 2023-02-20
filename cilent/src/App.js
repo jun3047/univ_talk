@@ -1,9 +1,16 @@
-import Login from './page/login.js'
-
+import Login from './page/Login.js'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Register from './page/Register.js';
 
 function App() {
   return (
-    <Login></Login>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/register" element={<Register />}></Route>
+        <Route path="*" element={<div/>}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

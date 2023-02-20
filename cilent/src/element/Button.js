@@ -17,6 +17,10 @@ const Button = styled.div`
   font-size: 12px;
   line-height: 14px;
   letter-spacing: -0.3px;
+
+  &:hover{
+    cursor: pointer;
+  }
 `;
   
   export default Button;

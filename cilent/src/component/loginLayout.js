@@ -1,7 +1,8 @@
+import { useState } from "react";
 import styled from "styled-components";
 import Button from "../element/Button";
 import { TextField, Title, SubTitle } from "../element/Text";
-import {LoginPageData} from "../pageData/loginPageData"
+import {LoginPageData, EmailPageData, CheckPageData, IDPWPageData, NickNamePageData} from "../pageData/loginPageData"
 
 const LoginWrapper = styled.div`
   display: flex;
@@ -27,22 +28,27 @@ const ButtonWrapper = styled.div`
 `;
 
 function LoginLayout() {
+
+  const [nowPageNum,setNowPageNum] = useState(0);
+  const allPageData = [LoginPageData, EmailPageData, CheckPageData, IDPWPageData, NickNamePageData];
+  const nowPage = allPageData[nowPageNum]
+
   return (
     <LoginWrapper>
       <TitleWrapper>
         <Title>대학수다</Title>
         <FlexBox />
-        <SubTitle>{LoginPageData.subtitle}</SubTitle>
+        <SubTitle>{nowPage.subtitle}</SubTitle>
       </TitleWrapper>
 
-      {LoginPageData.inputArr.map((data,i) => {
+      {nowPage.inputArr.map((data,i) => {
         return <TextField placeholder={data.placeholder} type={data.type} key={i} ></TextField>;
       })}
 
       <ButtonWrapper>
-        <Button onClick={LoginPageData.subBtn.handler} main={false}>{LoginPageData.subBtn.Text}</Button>
+        <Button onClick={nowPage.subBtn.handler} main={false}>{nowPage.subBtn.Text}</Button>
         <FlexBox />
-        <Button onClick={LoginPageData.mainBtn.handler} main={true}>{LoginPageData.mainBtn.Text}</Button>
+        <Button onClick={()=>{setNowPageNum(nowPageNum+1)}} main={true}>{nowPage.mainBtn.Text}</Button>
       </ButtonWrapper>
     </LoginWrapper>
   );

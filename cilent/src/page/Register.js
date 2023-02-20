@@ -8,7 +8,7 @@ const LoginPage = styled.div`
   padding-top: 33vh;
 `;
 
-function Login() {
+function Register() {
   return (
     <LoginPage>
       <LoginLayout></LoginLayout>
@@ -16,4 +16,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Register;

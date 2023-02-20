@@ -5,7 +5,7 @@ const LoginPageData = {
     { placeholder: "비밀번호를 입력해줘요", type: "password" },
   ],
   subBtn: { Text: "처음 왔어요", handler: null },
-  mainBtn: { Text: "문의하기", handler: null },
+  mainBtn: { Text: "로그인하기", handler: null },
 };
 
 
@@ -44,9 +44,8 @@ const NickNamePageData = {
   inputArr: [
     { placeholder: "닉네임을 입력해줘요", type: "string" },
   ],
-  subBtn: { Text: "문의할래요", handler: null },
+  subBtn: { Text: "중복 확인해줘요", handler: null },
   mainBtn: { Text: "이제 입장할래요", handler: null },
 }
-
 
 export {LoginPageData, EmailPageData, CheckPageData, IDPWPageData, NickNamePageData};
