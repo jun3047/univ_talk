@@ -1,23 +1,18 @@
-import styled from 'styled-components';
-import LoginLayout from '../component/loginLayout';
-
-
-
+import styled from "styled-components";
+import LoginLayout from "../component/loginLayout";
 
 const LoginPage = styled.div`
   width: 100vw;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
+  margin-top: 33vh;
+`;
 
 function Login() {
-    return (
-      <LoginPage>
-        <LoginLayout></LoginLayout>
-      </LoginPage>
-    );
-  }
-  
-  export default Login;
+  return (
+    <LoginPage>
+      <LoginLayout></LoginLayout>
+    </LoginPage>
+  );
+}
+
+export default Login;

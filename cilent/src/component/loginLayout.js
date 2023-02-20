@@ -40,9 +40,9 @@ function LoginLayout() {
       })}
 
       <ButtonWrapper>
-        <Button main={false}>처음 왔어요</Button>
+        <Button onClick={LoginPageData.subBtn.handler} main={false}>{LoginPageData.subBtn.Text}</Button>
         <FlexBox />
-        <Button main={true}>바로 입장하기</Button>
+        <Button onClick={LoginPageData.mainBtn.handler} main={true}>{LoginPageData.mainBtn.Text}</Button>
       </ButtonWrapper>
     </LoginWrapper>
   );
